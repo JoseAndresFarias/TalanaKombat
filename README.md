@@ -1,0 +1,2 @@
+# TalanaKombat
+Talana technical test
