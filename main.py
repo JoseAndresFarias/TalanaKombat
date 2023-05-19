@@ -1,10 +1,12 @@
-from src.game import Game
+from src.game import TalanaKombat
+import json
 
+import config
+tk = TalanaKombat()
 
-player1 = Player('Tonyn Stallone')
-player2 = Player('Arnaldor Shuatseneguer')
+json_file = open('game.json')
 
-text = player1.take_turn('AADSDP', player2)
-print(text)
-text = player1.take_turn('AADSDK', player2)
-print(player2.is_alive)
+game = json.load(json_file)
+
+result = tk.play(game)
+print(result)
